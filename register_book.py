@@ -3,7 +3,6 @@ library = [] # Lista principal para almacenar libros
 last_id = 0 # Variable para generar IDs únicos de forma incremental
 ALLOWED_CATEGORIES = ['fiction', 'non fiction', 'children', 'educational'] # Lista de categorías permitidas
 def generate_id(): # Función para generar un ID único autoincremental
-    global last_id
     last_id += 1
     return last_id
 def validate_text(field): # Función para validar campos de texto obligatorios
