@@ -54,26 +54,3 @@ def Register_a_book(): # Función para registrar un nuevo libro en el inventario
     }
     library.append(book) # Agregar el libro a la lista principal
     print(f"Book successfully registered with ID {book['id']}.")
-def Show_books(): # Función para mostrar todos los libros en el inventario
-    if not library:
-        print("The inventory is empty.")
-        return
-    print("\n--- Book Inventory ---")
-    for book in library:
-        print(f"ID: {book['id']} | Title: {book['title']} | Author: {book['author']} | Year: {book['year']} | Category: {book['category']} | Status: {book['status']}")
-
-while True:
-    print("\n--- Main Menu ---")
-    print("1. Register book")
-    print("2. Show inventory")
-    print("3. Exit")
-    option = input("Select an option: ").strip()
-    if option == '1':
-        Register_a_book()
-    elif option == '2':
-        Show_books()
-    elif option == '3':
-        print("Exiting the system...")
-        break
-    else:
-        print("Invalid option. Please try again.")
