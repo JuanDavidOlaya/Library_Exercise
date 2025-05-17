@@ -25,7 +25,8 @@ def show_menu(options, header):
     print(CYAN + "╚" + "═" * total_width + "╝" + RESET)
 
 def try_again(message, alert):
-    while True:
+    flag = True
+    while flag:
         try:
             again = input(MAGENTA + message + RESET).lower()
             if again == 'y':
